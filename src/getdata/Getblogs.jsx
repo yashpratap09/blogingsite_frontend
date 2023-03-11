@@ -180,7 +180,8 @@ const GetAllBlogs = () => {
 
 {Task.map((data, index) => {
     const { title,body,authorId,tags,category,subcategory ,_id } = data;
-        {
+      
+    
                        
            return (
              
@@ -217,7 +218,7 @@ const GetAllBlogs = () => {
               
                            )
                        
-       }
+       
 
 })}
 

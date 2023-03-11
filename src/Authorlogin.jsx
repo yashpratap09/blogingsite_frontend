@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import * as api from "./api/index"
-import image from "./image.jpg"
+import im from "./image.jpg"
 import {
   MDBContainer,
   MDBCol,
@@ -13,11 +13,12 @@ import {
 from 'mdb-react-ui-kit';
 
 function Authorlogin() {
+  
     const [postData, setPostData] = useState({email: '', password: '' }); 
    
 
     const clear = () =>{
-        setPostData({ email: '', password: ''})
+        setPostData({ email: '', password: ''})   
       }
 
       const handleClick = () =>{
@@ -58,7 +59,7 @@ function Authorlogin() {
       <MDBRow>
 
         <MDBCol col='10' md='6'  >
-          <img src={image} class="img-fluid" alt="Phone image" style={{"borderRadius":"35px"}} />
+          <img src={im} class="img-fluid" alt="Phone" style={{"borderRadius":"35px"}} />
           
         </MDBCol>
 
@@ -71,7 +72,7 @@ function Authorlogin() {
 
           <div className="d-flex justify-content-between mx-4 mb-4">
             <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Remember me' />
-            <a href="">Forgot password?</a>
+            {/* <a >Forgot password?</a> */}
           </div>
 
           <MDBBtn className="mb-4 w-100" size="lg" onClick={handleClick}>Sign in</MDBBtn>
