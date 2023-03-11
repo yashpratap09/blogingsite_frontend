@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;1,500&display=swap');
+:root{
+    --yellow:#f9ca24;
+  }
+  
+
+  *{
+   
+  
+    font-family: 'Nunito' , sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    
+
+  
+  }
+  .main-box{
+    padding-left: 1rem;
+    
+  }
+
+  
+  
+  
+  .box{
+    overflow-wrap: break-word;
+    background-color: #e7e1e0;
+    border-radius: 3rem;
+    height: auto;
+    width: 97%;
+    margin: 2rem 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    border-left: .2rem solid #fff;
+    position: relative;
+    background: rgb(238,174,202);
+background: linear-gradient(90deg, rgba(238,174,202,0.9557072829131653) 17%, rgba(148,187,233,1) 100%);
+   
+  }
+
+  .box span{
+    color: black;
+    font-size: 1.5rem;
+    
+  }
+
+  .box h {
+    font-size: 1.2rem;
+    color: #002fca;
+  }
+  
+
+  
+
+  .box button{
+    padding: 0.5rem;
+    border-radius: 25px;
+    background-color: black;
+    color: #f612ee;
+    margin: 1rem;
+    
+  }
+  
+  /* .education .box-container .box span{
+    font-size: 1.3rem;
+    background: #222;
+    color: #fff;
+    border-radius: 5rem;
+    padding: .5rem 2.5rem;
+  }
+  
+  .education .box-container .box h3{
+    font-size: 1.8rem;
+    color: #fff;
+    padding-top: 1.5rem;
+  }
+  
+  .education .box-container .box p{
+    font-size: 1.4rem;
+    color: #eee;
+    padding-top: 1rem 0;
+  }
+  
+  .education .box-container .box i{
+    position: absolute;
+    top:-1.5rem; left:-2.5rem;
+    height:5rem;
+    width:5rem;
+    border-radius: 50%;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    background: var(--yellow);
+  } */
+  .mainbox{
+    display: flex;
+    
+  }
+  .first{
+   
+    height: 49rem;
+    width: 50%;
+    background: rgb(238,174,202);
+background: linear-gradient(90deg, rgba(238,174,202,0.9557072829131653) 17%, rgba(148,187,233,1) 100%);
+
+  }
+  .second{
+    height: 49rem;
+    width: 50%;
+    background-color: #efe9d1;
+    overflow-y: scroll;
+    background: rgb(174,186,238);
+background: linear-gradient(90deg, rgba(174,186,238,0.9557072829131653) 0%, rgba(197,233,148,1) 62%);
+  }
