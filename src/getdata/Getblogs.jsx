@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import * as api from "../api/index"
 import './Getblogs.css'
-import { useNavigate } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
 import {
   MDBBtn,
   MDBContainer,
@@ -24,7 +24,7 @@ import 'bootstrap-css-only/css/bootstrap.min.css';
 
 
 const GetAllBlogs = () => {
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
   const [Task, setTask] = useState([]);
 
   const [edit, setEdit] = useState(false)
@@ -52,10 +52,16 @@ const GetAllBlogs = () => {
     } else {
 
       api.createBlogs(postData).then((response) => {
-        navigate(0)
+       // console.log("response", response);
+       alert("Blog successfully created")
+         clear()}
+        ).catch((error) => {
+            
+           // console.log(error.response)
+        alert(error.response.data.msg)
+    })
        // window.location.reload()
-      }).then(
-        clear())
+     
 
     }
 
