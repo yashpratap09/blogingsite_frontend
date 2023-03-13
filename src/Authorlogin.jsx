@@ -2,6 +2,8 @@ import React,{useState} from 'react';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import * as api from "./api/index"
 import im from "./image.jpg"
+import {NavLink} from "react-router-dom";
+import { useNavigate } from 'react-router-dom'
 import {
   MDBContainer,
   MDBCol,
@@ -13,7 +15,7 @@ import {
 from 'mdb-react-ui-kit';
 
 function Authorlogin() {
-  
+  const navigate = useNavigate()
     const [postData, setPostData] = useState({email: '', password: '' }); 
    
 
@@ -38,7 +40,9 @@ function Authorlogin() {
            
             localStorage.setItem("token", Response.data.token)
             alert("Successfully login")
-           window.location.href = "/blogs"
+
+            navigate("/blogs")
+          // window.location.href = "/blogs"
            
             
         }).catch((error) => {
@@ -78,7 +82,8 @@ function Authorlogin() {
           <MDBBtn className="mb-4 w-100" size="lg" onClick={handleClick}>Sign in</MDBBtn>
 
           <div className="divider d-flex align-items-center my-4">
-            <p >OR  Authors registration : <a href="/authors">click for registration</a></p>
+            <p >OR  Authors registration :   <NavLink to="/authors"exact>click for registration</NavLink>  </p>   
+             {/* <a href="/authors">click for registration</a> */}
           </div>
 
         </MDBCol>

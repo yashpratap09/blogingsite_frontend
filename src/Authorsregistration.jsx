@@ -1,6 +1,8 @@
 import React ,{useState} from 'react';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import * as api from "./api/index"
+import { useNavigate } from 'react-router-dom';
+import {NavLink} from "react-router-dom";
 import {
   MDBBtn,
   MDBContainer,
@@ -16,6 +18,7 @@ from 'mdb-react-ui-kit';
 
 
 function Authorsregistration() {
+  const navigate = useNavigate()
 
   const [postData, setPostData] = useState({ fname: '', lname: '', title: '', email: '', password: '' }); 
 
@@ -39,9 +42,21 @@ function Authorsregistration() {
     }else if(password===""){
       alert("password is Required")
     }else{
-      api.createAuther(postData).then(
+      api.createAuther(postData).then((response) => {
+        localStorage.setItem("authorId",response.data.msg._id)
+        
+        alert("Registration successfully Please Note your AuthorId==>" + response.data.msg._id)
         clear()
-      )
+        navigate("/")
+    
+         
+           //window.location.href = "/"
+    
+    }).catch((error) => {
+        alert(error.response.data.message)
+    })
+    
+      
       //.then(  window.location.href = "/")
 
     }
@@ -77,7 +92,8 @@ function Authorsregistration() {
 
           <MDBBtn className='w-100 mb-4' size='md' onClick={handleClick}>sign up</MDBBtn>
 
-          <p>or login: <a href="/">Click for login</a> </p>
+         {/* // <p>or login: <a href="/">Click for login</a> </p> */}
+          <p>or login:   <NavLink to="/"exact>Click for login</NavLink>  </p>   
 
           
 
