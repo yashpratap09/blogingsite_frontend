@@ -6,6 +6,7 @@ import Authorlogin from './Authorlogin'
 import GetAllBlogs from './getdata/Getblogs'
 // import CreateBlogs from './createBlogs/createBlogs';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter } from 'react-router-dom'
 
 
 
@@ -13,7 +14,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
-  <BrowserRouter>
+  <HashRouter>
   
   <Routes>
 
@@ -26,7 +27,7 @@ root.render(
   
   
   
-  </BrowserRouter>
+  </HashRouter>
 
 );
 
