@@ -15,7 +15,13 @@ bash
 Copy code
 
 frontend ==>>   git clone https://github.com/yashpratap09/blogingsite_frontend.git
+
+
 backend====>>   https://github.com/yashpratap09/blogingsite.git
+
+diploy link ====>>>>   https://remarkable-fairy-50a274.netlify.app/
+
+
 Install dependencies:
 
 cd blogging-site
