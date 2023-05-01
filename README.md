@@ -19,7 +19,7 @@ frontend ==>>   git clone https://github.com/yashpratap09/blogingsite_frontend.g
 
 backend====>>   https://github.com/yashpratap09/blogingsite.git
 
-diploy link ====>>>>   https://remarkable-fairy-50a274.netlify.app/
+diploy link ====>>>>   https://warm-unicorn-6c8161.netlify.app/
 
 
 Install dependencies:
